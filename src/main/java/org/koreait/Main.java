@@ -1,18 +1,17 @@
 package org.koreait;
 
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int x = sc.nextInt();
-        int y = sc.nextInt();
+        int x = 10;
 
-        for (int i = 0; i < y; i++) {
-            for (int j = 0; j < x; j++) {
-                System.out.print("*");
-            }
-            System.out.println();
+        for (int i = 0; i < x; i++) {
+            System.out.print(Fibonacci(i) + " ");
         }
+
+    }
+    public static int Fibonacci(int n) {
+        if (n == 0) return 0;
+        else if (n == 1) return 1;
+        return Fibonacci(n - 1) + Fibonacci(n - 2);
     }
 }
